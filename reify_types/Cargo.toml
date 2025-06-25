@@ -1,0 +1,11 @@
+[package]
+name = "reify_types"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+syn.workspace = true
+reify_types_macro.workspace = true
+
+[dev-dependencies]
+trybuild.workspace = true

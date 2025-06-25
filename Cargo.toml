@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["reify_types", "reify_types_macro"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.dependencies]
+getset = "0.1.6"
+inventory = "0.3.20"
+proc-macro2 = "1.0.95"
+syn = "2.0.104"
+quote = "1.0.40"
+trybuild = "1.0.105"
+reify_types_macro = { path = "reify_types_macro" }
