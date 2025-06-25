@@ -1,5 +1,4 @@
 [workspace]
-resolver = "2"
 members = ["reify_types", "reify_types_macro"]
 
 [workspace.package]
@@ -10,7 +9,8 @@ edition = "2024"
 getset = "0.1.6"
 inventory = "0.3.20"
 proc-macro2 = "1.0.95"
-syn = "2.0.104"
+syn = { version = "2.0.104", features = ["full", "extra-traits"] }
 quote = "1.0.40"
 trybuild = "1.0.105"
 reify_types_macro = { path = "reify_types_macro" }
+resolver = "2"

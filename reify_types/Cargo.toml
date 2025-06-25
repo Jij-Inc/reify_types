@@ -2,6 +2,7 @@
 name = "reify_types"
 version.workspace = true
 edition.workspace = true
+readme = "../README.md"
 
 [dependencies]
 syn.workspace = true
