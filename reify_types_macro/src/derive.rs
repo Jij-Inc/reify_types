@@ -17,10 +17,10 @@ pub(crate) fn derive(input: DeriveInput) -> Result<TokenStream> {
     });
     match input.data {
         Data::Struct(_) => tokens.extend(quote! {
-            impl ::reify_types::ReifyStruct for #ty_ {}
+            impl #impl_gen  ::reify_types::ReifyStruct for #ty_ #ty_gen #wheres {}
         }),
         Data::Enum(_) => tokens.extend(quote! {
-            impl ::reify_types::ReifyEnum for #ty_ {}
+            impl #impl_gen ::reify_types::ReifyEnum for #ty_ #ty_gen #wheres {}
         }),
         Data::Union(_) => (),
     }
